@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Alima Pilates | Прайс-лист</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-dark: #1a2a4d;
+            --brand-gold: #c5a059;
+            --bg-cream: #fdfaf7;
+        }
+
+        /* Оптимизация для мобильных устройств */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--bg-cream);
+            color: var(--brand-dark);
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+        }
+
+        .numbers {
+            font-family: 'Montserrat', sans-serif;
+            font-variant-numeric: lining-nums;
+            letter-spacing: -0.01em;
+        }
+
+        .header-container {
+            position: relative;
+            padding: calc(60px + env(safe-area-inset-top)) 20px 100px;
+            background: linear-gradient(to bottom, #1a2a4d, #2c3e6b);
+            border-bottom-left-radius: 50% 30px;
+            border-bottom-right-radius: 50% 30px;
+            text-align: center;
+        }
+
+        .logo-wrapper {
+            max-width: 320px;
+            margin: 0 auto 20px;
+            width: 80%;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Адаптивный заголовок через Flexbox (решает проблему смещения) */
+        .section-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .line {
+            height: 1px;
+            flex: 1;
+            max-width: 40px;
+            background: var(--brand-gold);
+            opacity: 0.6;
+        }
+
+        .title-text {
+            white-space: nowrap;
+            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 0.5px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-size: clamp(14px, 4vw, 17px);
+            font-weight: 400;
+            color: var(--brand-dark);
+            opacity: 0.9;
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .value {
+            font-size: clamp(18px, 5vw, 20px);
+            font-weight: 600;
+        }
+
+        .currency {
+            font-size: 11px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .gold-text {
+            color: var(--brand-gold);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .footer-note {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            line-height: 1.6;
+            opacity: 0.5;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="pb-44">
+
+    <!-- Хедер -->
+    <header class="header-container">
+        <div class="logo-wrapper">
+            <img src="https://i.ibb.co.com/whKNvYsW/IMG-3712.png" alt="Alima Pilates Logo" class="w-full h-auto">
+        </div>
+        <h1 class="text-white text-4xl italic font-light tracking-[0.2em] mt-8">Alima Pilates</h1>
+        <p class="text-white/40 text-[10px] uppercase tracking-[0.5em] mt-3 font-medium">Reformer Studio • Taraz</p>
+    </header>
+
+    <main class="max-w-md mx-auto px-6 -mt-14 relative z-10">
+        
+        <!-- Секция: Группы Алимы -->
+        <div class="glass-card p-10 mb-8">
+            <div class="section-title-container">
+                <div class="line"></div>
+                <h2 class="title-text">Группы Алимы</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="space-y-0">
+                <div class="price-row">
+                    <span class="label">Разовый визит</span>
+                    <div class="price-box numbers">
+                        <span class="value">6 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <span class="label">Абонемент (8)</span>
+                    <div class="price-box numbers">
+                        <span class="value">38 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <span class="label font-semibold gold-text italic">Абонемент (12)</span>
+                    <div class="price-box numbers gold-text">
+                        <span class="value text-2xl">48 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row pt-8 border-none opacity-80">
+                    <span class="label italic">Индивидуально</span>
+                    <div class="price-box numbers">
+                        <span class="value">15 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row border-none opacity-80">
+                    <span class="label italic">Сплит тренировка</span>
+                    <div class="price-box numbers">
+                        <span class="value">12 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция: Команда Студии -->
+        <div class="glass-card p-10 mb-10">
+            <div class="section-title-container">
+                <div class="line"></div>
+                <h2 class="title-text">Команда студии</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="space-y-0">
+                <div class="price-row">
+                    <span class="label">Разовый визит</span>
+                    <div class="price-box numbers">
+                        <span class="value">5 500</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <span class="label">Абонемент (8)</span>
+                    <div class="price-box numbers">
+                        <span class="value">32 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <span class="label font-semibold gold-text italic">Абонемент (12)</span>
+                    <div class="price-box numbers gold-text">
+                        <span class="value text-2xl">42 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row pt-8 border-none opacity-80">
+                    <span class="label italic">Индивидуально</span>
+                    <div class="price-box numbers">
+                        <span class="value">10 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+                <div class="price-row border-none opacity-80">
+                    <span class="label italic">Сплит тренировка</span>
+                    <div class="price-box numbers">
+                        <span class="value">8 000</span>
+                        <span class="currency">KZT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="text-center px-4 space-y-8 mb-10">
+            <p class="footer-note">
+                *Посещение студии возможно на основании<br>
+                разовой оплаты или приобретения абонемента
+            </p>
+            
+            <div class="flex flex-col items-center gap-4">
+                <div class="h-[0.5px] w-full bg-brand-dark/10"></div>
+                <p class="text-[10px] uppercase tracking-[0.3em] font-semibold opacity-80">
+                    Контроль над телом начинается с контроля над движением
+                </p>
+                <div class="h-[0.5px] w-full bg-brand-dark/10"></div>
+            </div>
+
+            <p class="text-3xl italic opacity-30 font-light">«Меняем тело — меняем жизнь»</p>
+        </div>
+
+    </main>
+
+    <!-- Кнопка WhatsApp -->
+    <div class="fixed bottom-10 left-0 right-0 px-8 z-50 text-center">
+        <a href="https://wa.me/77027340510" 
+           class="whatsapp-btn inline-flex items-center justify-center gap-4 text-white py-5 px-10 rounded-2xl w-full max-w-sm">
+            <span class="text-[11px] font-bold tracking-[0.25em] uppercase font-sans">Записаться на занятие</span>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.284l-.569 2.103 2.201-.588c1.017.609 1.908.987 3.098.987 3.181 0 5.767-2.586 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm3.391 8.221c-.142.405-.831.74-1.152.781-.321.041-.712.067-1.137-.067-.27-.084-.614-.202-1.043-.385-1.836-.78-3.033-2.646-3.125-2.768-.092-.122-.751-.999-.751-1.997 0-.998.522-1.487.708-1.691.186-.204.405-.254.54-.254.135 0 .27 0 .389.006.126.006.297-.048.464.354.172.416.59 1.436.64 1.537.05.101.084.22.017.354-.067.135-.101.22-.202.338-.101.118-.213.263-.304.354-.101.101-.207.211-.09.411.117.2 0 .041.117.2.522.897 1.134 1.554 1.865 2.011.232.145.451.215.617.266.304.093.58.079.8-.029.245-.118.744-.439.845-.744.101-.305.101-.566.071-.617-.03-.051-.114-.084-.241-.148z"/>
+                <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 1.5c6.351 0 11.5-5.149 11.5-11.5S18.351.5 12 .5.5 5.649.5 12 5.649 23.5 12 23.5z"/>
+            </svg>
+        </a>
+    </div>
+
+</body>
+</html>
+
